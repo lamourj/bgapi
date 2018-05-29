@@ -267,7 +267,7 @@ class BlueGigaAPI(object):
         # payload_length &= 0x7ff
         rx_payload = packet[4:]
         if technology_type:
-            raise ValueError("Unsupported techlogy type: 0x%02x" % technology_type)
+            raise ValueError("Unsupported technology type: 0x%02x" % technology_type)
         if message_type == 0:
             # 0x00 = BLE response packet
             self.parse_bgapi_response(packet_class, packet_command, rx_payload, callbacks)
